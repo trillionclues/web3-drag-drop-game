@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400&display=swap');
+
+:root {
+  --border-color: #e3e5e4;
+  --background-color: #f2ebe9;
+  --text-color: #34444f;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin: 0;
+  font-family: 'Lato', sans-serif;
+  background-image: linear-gradient(115deg, #a5becc, #243a73);
+}
+
+p {
+  width: auto;
+  font-size: 18px;
+  font-weight: 300;
+  text-align: center;
+  color: #f2ebe9;
+  margin: 3px 0 35px 0;
+}
+
+h1 {
+  text-decoration-color: #f2ebe9;
+  color: var(--text-color);
+  /* background: #f2ebe9; */
+  font-weight: 700;
+  text-transform: initial;
+  margin-bottom: 1px;
+  line-height: 1.4;
+}
+
+.draggable-list {
+  border: 1.2px solid var(--border-color);
+  color: var(--text-color);
+  padding: 0;
+  list-style-type: none;
+}
+
+.draggable-list li {
+  background-color: var(--text-color);
+  display: flex;
+  flex: 1;
+}
+
+.draggable-list li:not(:last-of-type) {
+  border-bottom: 1px solid var(--border-color);
+}
+
+.mcap {
+  background-color: var(--background-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  height: 60px;
+  width: 60px;
+}
+
+.draggable-list .coin-name {
+  margin: 0 20px 0 0;
+}
+
+.draggable {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+  margin: 0 75px;
+  flex: 1;
+}
+
+.draggable-list li.right .coin-name {
+  color: #3ae374;
+}
+
+.draggable-list li.wrong .coin-name {
+  color: #ff3838;
+}
+
+.draggable-list li.over .draggable {
+  background-color: #eaeaea;
+}
+
+.check-btn {
+  background-color: var(--border-color);
+  border: none;
+  border-radius: 5px;
+  color: var(--text-color);
+  font-size: 16px;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+.check-btn:active {
+  transform: scale(0.98);
+}
+
+.check-btn:focus {
+  outline: none;
+}
