@@ -32,6 +32,7 @@ p {
 }
 
 h1 {
+  text-align: center;
   text-decoration-color: #f2ebe9;
   color: var(--text-color);
   /* background: #f2ebe9; */
@@ -110,4 +111,24 @@ h1 {
 
 .check-btn:focus {
   outline: none;
+}
+
+@media screen and (max-width: 550px) {
+  p {
+    width: 230px;
+    font-size: 18px;
+    font-weight: 300;
+  }
+
+  h1 {
+    /* background: #f2ebe9; */
+    font-weight: 400;
+    min-width: 350px;
+  }
+
+  .draggable {
+    padding: 10px;
+    margin: 0 5px;
+    flex: 1;
+  }
 }
